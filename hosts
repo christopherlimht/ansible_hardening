@@ -1,0 +1,9 @@
+[windows_server]
+192.168.56.107
+
+[windows_server:vars]
+ansible_user=administrator
+ansible_password=p@ssw0rd
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+datacenter = true

@@ -1,0 +1,12 @@
+---
+- hosts: windows_server
+
+  tasks:
+  - name: Security policies
+    win_security_policy:
+     section: System Access
+     key: "{{ item.key }}"
+     value: "{{ item.value }}"
+    with_items:
+    - {key: PasswordHistorySize, value: 24}
+    - {key: MaximumPasswordAge, value: 60}

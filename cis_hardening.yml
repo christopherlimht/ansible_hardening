@@ -1,0 +1,13 @@
+---
+# tasks file for cis-windows-level1
+- hosts: windows_server
+  tasks:
+  - name: CIS-L1 Account policies rules
+    include_tasks: 01-AccountPolicies.yml
+  - name: CIS-L1 Local policies, user management rules
+    include_tasks: 02-LocalPolicies_UserRightsAssignment.yml
+
+# HKU won't allow new registry paths to be created in the root folder
+# https://docs.ansible.com/ansible/devel/modules/win_regedit_module.html#notes
+#- name: CIS-L1 HKEY_USER Registry rules
+#  include_tasks: 19-HKUreg.yml

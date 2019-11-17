@@ -7,3 +7,7 @@ ansible_password=p@ssw0rd
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 datacenter = true
+IIS = false
+exchange = false
+adminstratorName = notAdministrator
+guestName = notGuest

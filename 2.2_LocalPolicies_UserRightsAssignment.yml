@@ -28,7 +28,9 @@
   win_user_right:
     name: SeTcbPrivilege
     users:
-    action: set
+    - 'Authenticated Users'
+    - 'Administrators'
+    action: remove
 
 - name: 2.2.5 (L1) Ensure 'Add workstations to domain' is set to 'Administrators' (DC only) (Scored)
   win_user_right:
@@ -170,11 +172,12 @@
     users:
     - 'Administrators'
     - 'Authenticated Users'
+    - 'Guests'
     action: set
 
 - name: 2.2.23 (L1) Ensure 'Deny log on as a service' to include 'Guests' (Scored)
   win_user_right:
-    name: SeTcbPrivilege
+    name: SeDenyServiceLogonRight
     users:
     - 'Guests'
     action: add

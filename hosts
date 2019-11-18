@@ -9,5 +9,6 @@ ansible_winrm_server_cert_validation=ignore
 datacenter = true
 IIS = false
 exchange = false
+cislevel = 1
 adminstratorName = notAdministrator
 guestName = notGuest

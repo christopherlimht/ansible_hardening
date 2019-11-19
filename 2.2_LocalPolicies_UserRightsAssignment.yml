@@ -28,9 +28,7 @@
   win_user_right:
     name: SeTcbPrivilege
     users:
-    - 'Authenticated Users'
-    - 'Administrators'
-    action: remove
+    action: set
 
 - name: 2.2.5 (L1) Ensure 'Add workstations to domain' is set to 'Administrators' (DC only) (Scored)
   win_user_right:
@@ -284,7 +282,7 @@
 
 - name: 2.2.35 (L1) Ensure 'Lock pages in memory' is set to 'No One' (Scored)
   win_user_right:
-    name: SeTcbPrivilege
+    name: SeLockMemoryPrivilege
     users:
     - 'Administrators'
     - 'Authenticated Users'
@@ -292,8 +290,8 @@
 
 - name: 2.2.36 (L2) Ensure 'Log on as a batch job' is set to 'Administrators' (DC Only) (Scored)
   win_user_right:
-    name: SeLockMemoryPrivilege
-    users:
+    name: SeBatchLogonRight
+    users: 'Administrators'
     action: set
 
 - name: 2.2.37 (L1) Ensure 'Manage auditing and security log' is set to 'Administrators` and (when Exchange is running in the environment) `Exchange Servers' (DC only) (Scored)

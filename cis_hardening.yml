@@ -2,10 +2,10 @@
 # tasks file for cis-windows-level1
 - hosts: windows_server
   tasks:
-  - name: CIS-L1 Account policies rules
-    include_tasks: 1.0_AccountPolicies.yml
-  - name: CIS-L1 Local policies, user management rules
-    include_tasks: 2.2_LocalPolicies_UserRightsAssignment.yml
+  # - name: CIS-L1 Account policies rules
+  #   include_tasks: 1.0_AccountPolicies.yml
+  # - name: CIS-L1 Local policies, user management rules
+  #   include_tasks: 2.2_LocalPolicies_UserRightsAssignment.yml
   - name: CIS-L1 Local policies, user management rules
     include_tasks: 2.3_LocalPolicies_SecurityOptions.yml
 

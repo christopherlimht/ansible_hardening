@@ -267,6 +267,14 @@
     type: dword
     state: present
 
+- name: "2.3.9.3 (L1) Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled' (Scored)"
+  win_regedit:
+    path: 'HKLM:\System\CurrentControlSet\Services\LanManServer\Parameters'
+    name: EnableSecuritySignature
+    data: 1
+    type: dword
+    state: present
+
 - name: "2.3.9.4 (L1) Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled' (Scored)"
   win_regedit:
     path: 'HKLM:\System\CurrentControlSet\Services\LanManServer\Parameters'

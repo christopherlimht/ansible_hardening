@@ -7,6 +7,7 @@
   - { rule: 17.1.1, name: 'Credential Validation', type: 'success, failure' }
   - { rule: 17.2.1, name: 'Application Group Management', type: 'success, failure' }
   - { rule: 17.2.2, name: 'Computer Account Management', type: 'success, failure' }
+  - { rule: 17.2.3, name: 'Distribution Group Management', type: 'success, failure' }
   - { rule: 17.2.4, name: 'Other Account Management Events', type: 'success, failure' }
   - { rule: 17.2.5, name: 'Security Group Management', type: 'success, failure' }
   - { rule: 17.2.6, name: 'User Account Management', type: 'success, failure' }

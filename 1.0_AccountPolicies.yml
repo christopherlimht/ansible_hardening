@@ -13,4 +13,4 @@
   - { rule: 1.1.6, key: ClearTextPassword, value: 0 }
   - { rule: 1.2.1, key: LockoutDuration, value: 900 }
   - { rule: 1.2.2, key: LockoutBadCount, value: 10 }
-  - { rule: 1.2.3, key: ResetLockoutCount, value: 0 }
+  - { rule: 1.2.3, key: ResetLockoutCount, value: 15 }

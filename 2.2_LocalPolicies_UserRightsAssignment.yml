@@ -284,8 +284,6 @@
   win_user_right:
     name: SeLockMemoryPrivilege
     users:
-    - 'Administrators'
-    - 'Authenticated Users'
     action: set
 
 - name: 2.2.36 (L2) Ensure 'Log on as a batch job' is set to 'Administrators' (DC Only) (Scored)
@@ -380,7 +378,6 @@
   win_user_right:
     name: SeSyncAgentPrivilege
     users:
-    - 'Administrators'
     action: set
 
 - name: 2.2.48 (L1) Ensure 'Take ownership of files or other objects' is set to 'Administrators' (Scored)
